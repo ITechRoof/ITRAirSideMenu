@@ -14,6 +14,7 @@
 		A6C4AB9B1B7A5D7400AF0EC6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C4AB9A1B7A5D7400AF0EC6 /* Images.xcassets */; };
 		A6C4AB9E1B7A5D7400AF0EC6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6C4AB9C1B7A5D7400AF0EC6 /* LaunchScreen.xib */; };
 		A6C4ABAA1B7A5D7400AF0EC6 /* ITRAirSideMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C4ABA91B7A5D7400AF0EC6 /* ITRAirSideMenuTests.m */; };
+		A6C5EEB21B7AFB4800C8F3C4 /* ITRAirSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C5EEB11B7AFB4800C8F3C4 /* ITRAirSideMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		A6C4ABA31B7A5D7400AF0EC6 /* ITRAirSideMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ITRAirSideMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C4ABA81B7A5D7400AF0EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6C4ABA91B7A5D7400AF0EC6 /* ITRAirSideMenuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ITRAirSideMenuTests.m; sourceTree = "<group>"; };
+		A6C5EEB01B7AFB4800C8F3C4 /* ITRAirSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ITRAirSideMenu.h; path = Classes/ITRAirSideMenu.h; sourceTree = "<group>"; };
+		A6C5EEB11B7AFB4800C8F3C4 /* ITRAirSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ITRAirSideMenu.m; path = Classes/ITRAirSideMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		A6C4AB8C1B7A5D7400AF0EC6 /* ITRAirSideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				A6C5EEAF1B7AFAFB00C8F3C4 /* Classes */,
 				A6C4AB911B7A5D7400AF0EC6 /* AppDelegate.h */,
 				A6C4AB921B7A5D7400AF0EC6 /* AppDelegate.m */,
 				A6C4AB941B7A5D7400AF0EC6 /* ViewController.h */,
@@ -117,6 +121,15 @@
 				A6C4ABA81B7A5D7400AF0EC6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A6C5EEAF1B7AFAFB00C8F3C4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A6C5EEB01B7AFB4800C8F3C4 /* ITRAirSideMenu.h */,
+				A6C5EEB11B7AFB4800C8F3C4 /* ITRAirSideMenu.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6C4AB961B7A5D7400AF0EC6 /* ViewController.m in Sources */,
+				A6C5EEB21B7AFB4800C8F3C4 /* ITRAirSideMenu.m in Sources */,
 				A6C4AB931B7A5D7400AF0EC6 /* AppDelegate.m in Sources */,
 				A6C4AB901B7A5D7400AF0EC6 /* main.m in Sources */,
 			);
@@ -416,6 +430,7 @@
 				A6C4ABAF1B7A5D7400AF0EC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6C4ABB01B7A5D7400AF0EC6 /* Build configuration list for PBXNativeTarget "ITRAirSideMenuTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +439,7 @@
 				A6C4ABB21B7A5D7400AF0EC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
