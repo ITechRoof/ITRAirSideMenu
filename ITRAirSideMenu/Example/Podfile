@@ -1,9 +1,0 @@
-source 'https://github.com/CocoaPods/Specs.git'
-use_frameworks!
-
-
-target 'ITRAirSideMenu_Tests', :exclusive => true do
-  pod "ITRAirSideMenu", :path => "../"
-
-  
-end

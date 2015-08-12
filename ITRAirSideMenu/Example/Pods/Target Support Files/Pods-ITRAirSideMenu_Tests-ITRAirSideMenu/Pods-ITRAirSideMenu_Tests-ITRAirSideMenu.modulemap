@@ -1,6 +1,0 @@
-framework module ITRAirSideMenu {
-  umbrella header "Pods-ITRAirSideMenu_Tests-ITRAirSideMenu-umbrella.h"
-
-  export *
-  module * { export * }
-}
