@@ -2,6 +2,8 @@
 
 Navigation similar to Flipkart drawer navigation
 
+<img src = "https://imgflip.com/gif/ph508"/>
+
 ## Requirements
 * Xcode 6 or higher
 * Apple LLVM compiler
