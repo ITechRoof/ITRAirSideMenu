@@ -7,8 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "ITRFirstViewController.h"
+#import "ITRLeftMenuController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<ITRAirSideMenuDelegate>
 
 @end
 
@@ -16,7 +18,39 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    //sidemenu created with content view controller & menu view controller
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[ITRFirstViewController controller]];
+    ITRLeftMenuController *leftMenuViewController = [ITRLeftMenuController controller];
+    _itrAirSideMenu = [[ITRAirSideMenu alloc] initWithContentViewController:navigationController leftMenuViewController:leftMenuViewController];
+
+    _itrAirSideMenu.backgroundImage = [UIImage imageNamed:@"menu_bg"];
+    
+    //optional delegate to receive menu view status
+    _itrAirSideMenu.delegate = self;
+    
+    //content view shadow properties
+    _itrAirSideMenu.contentViewShadowColor = [UIColor blackColor];
+    _itrAirSideMenu.contentViewShadowOffset = CGSizeMake(0, 0);
+    _itrAirSideMenu.contentViewShadowOpacity = 0.6;
+    _itrAirSideMenu.contentViewShadowRadius = 12;
+    _itrAirSideMenu.contentViewShadowEnabled = YES;
+    
+    //content view animation properties
+    _itrAirSideMenu.contentViewScaleValue = 0.7f;
+    _itrAirSideMenu.contentViewRotatingAngle = 30.0f;
+    _itrAirSideMenu.contentViewTranslateX = 150.0f;
+    
+    //menu view properties
+    _itrAirSideMenu.menuViewRotatingAngle = 30.0f;
+    _itrAirSideMenu.menuViewTranslateX = 150.0f;
+    
+    self.window.rootViewController = _itrAirSideMenu;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
@@ -40,6 +74,29 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark -
+#pragma mark ITRAirSideMenu Delegate
+
+- (void)sideMenu:(ITRAirSideMenu *)sideMenu willShowMenuViewController:(UIViewController *)menuViewController
+{
+    NSLog(@"willShowMenuViewController: %@", NSStringFromClass([menuViewController class]));
+}
+
+- (void)sideMenu:(ITRAirSideMenu *)sideMenu didShowMenuViewController:(UIViewController *)menuViewController
+{
+    NSLog(@"didShowMenuViewController: %@", NSStringFromClass([menuViewController class]));
+}
+
+- (void)sideMenu:(ITRAirSideMenu *)sideMenu willHideMenuViewController:(UIViewController *)menuViewController
+{
+    NSLog(@"willHideMenuViewController: %@", NSStringFromClass([menuViewController class]));
+}
+
+- (void)sideMenu:(ITRAirSideMenu *)sideMenu didHideMenuViewController:(UIViewController *)menuViewController
+{
+    NSLog(@"didHideMenuViewController: %@", NSStringFromClass([menuViewController class]));
 }
 
 @end

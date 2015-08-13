@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ITRFirstViewController : UIViewController
 
++ (instancetype) controller;
 
 @end
 
