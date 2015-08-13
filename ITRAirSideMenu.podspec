@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'ITRAirSideMenu'
-  s.version      = '0.0.2'
+  s.version      = '1.0.0'
   s.summary      = 'Navigation similar to Flipkart drawer navigation'
   s.homepage     = 'https://github.com/ITechRoof/ITRAirSideMenu'
   
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
 
   s.author       = { 'Kiruthika' => 'kirthi.shalom@gmail.com' }
   s.platform     = :ios, '7.0'
-  s.source       = { :git => 'https://github.com/ITechRoof/ITRAirSideMenu.git', :tag => '0.0.2' }
+  s.source       = { :git => 'https://github.com/ITechRoof/ITRAirSideMenu.git', :tag => s.version.to_s }
   s.source_files = 'classes/*.{h,m}'
   s.frameworks   = 'UIKit'
   s.requires_arc = true
