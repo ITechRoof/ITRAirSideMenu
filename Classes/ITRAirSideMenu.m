@@ -476,7 +476,7 @@
                 
                 //menu view rotate transform
                 CATransform3D menuRotateTransform =  _leftMenuViewController.view.layer.transform;
-                menuRotateTransform = CATransform3DMakeRotation(_menuViewRotatingAngle * M_PI/180.0f, 0.0f, -1.0f, 0.0f);
+                menuRotateTransform = CATransform3DMakeRotation(menuAngle * M_PI/180.0f, 0.0f, -1.0f, 0.0f);
                 CATransform3D sublayerTransform1 = _leftMenuViewController.view.superview.layer.sublayerTransform;
                 sublayerTransform1.m34 = 1.0f / -300.0f;
                 _leftMenuViewController.view.superview.layer.sublayerTransform = sublayerTransform1;

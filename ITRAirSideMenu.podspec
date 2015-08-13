@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.author       = { 'Kiruthika' => 'kirthi.shalom@gmail.com' }
   s.platform     = :ios, '7.0'
   s.source       = { :git => 'https://github.com/ITechRoof/ITRAirSideMenu.git', :tag => '0.0.1' }
-  s.source_files = 'Classes/*.{h,m}'
+  s.source_files = 'classes/*.{h,m}'
   s.frameworks   = 'UIKit'
   s.requires_arc = true
 
