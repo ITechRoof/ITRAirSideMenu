@@ -2,7 +2,7 @@
 
 Navigation similar to Flipkart drawer navigation
 
-<img src = "https://imgflip.com/gif/ph508"/>
+<img src="http://cdn.makeagif.com/media/8-13-2015/8Xp0wX.gif" alt="">
 
 ## Requirements
 * Xcode 6 or higher
