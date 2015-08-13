@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6C9D72F1B7BB0C9001CBC14 /* ITRLeftMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C9D72E1B7BB0C9001CBC14 /* ITRLeftMenuController.m */; };
+		A6C9D7321B7BB35A001CBC14 /* ITRSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C9D7311B7BB35A001CBC14 /* ITRSecondViewController.m */; };
+		A6C9D7361B7BBCD4001CBC14 /* ITRAirSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C9D7351B7BBCD4001CBC14 /* ITRAirSideMenu.m */; };
 		A6CB7AAE1B7B08AA009A9E14 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CB7AA41B7B08AA009A9E14 /* AppDelegate.m */; };
 		A6CB7AAF1B7B08AA009A9E14 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6CB7AA51B7B08AA009A9E14 /* LaunchScreen.xib */; };
 		A6CB7AB01B7B08AA009A9E14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6CB7AA71B7B08AA009A9E14 /* Main.storyboard */; };
 		A6CB7AB11B7B08AA009A9E14 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6CB7AA91B7B08AA009A9E14 /* Images.xcassets */; };
 		A6CB7AB21B7B08AA009A9E14 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6CB7AAA1B7B08AA009A9E14 /* Info.plist */; };
 		A6CB7AB31B7B08AA009A9E14 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CB7AAB1B7B08AA009A9E14 /* main.m */; };
-		A6CB7AB41B7B08AA009A9E14 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CB7AAD1B7B08AA009A9E14 /* ViewController.m */; };
-		A6CB7AB81B7B092D009A9E14 /* ITRAirSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CB7AB71B7B092D009A9E14 /* ITRAirSideMenu.m */; };
+		A6CB7AB41B7B08AA009A9E14 /* ITRFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CB7AAD1B7B08AA009A9E14 /* ITRFirstViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A6C4AB8A1B7A5D7400AF0EC6 /* ITRAirSideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITRAirSideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C9D72D1B7BB0C9001CBC14 /* ITRLeftMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITRLeftMenuController.h; sourceTree = "<group>"; };
+		A6C9D72E1B7BB0C9001CBC14 /* ITRLeftMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITRLeftMenuController.m; sourceTree = "<group>"; };
+		A6C9D7301B7BB35A001CBC14 /* ITRSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITRSecondViewController.h; sourceTree = "<group>"; };
+		A6C9D7311B7BB35A001CBC14 /* ITRSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITRSecondViewController.m; sourceTree = "<group>"; };
+		A6C9D7341B7BBCD4001CBC14 /* ITRAirSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITRAirSideMenu.h; sourceTree = "<group>"; };
+		A6C9D7351B7BBCD4001CBC14 /* ITRAirSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITRAirSideMenu.m; sourceTree = "<group>"; };
 		A6CB7AA31B7B08AA009A9E14 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A6CB7AA41B7B08AA009A9E14 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A6CB7AA61B7B08AA009A9E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -26,10 +34,8 @@
 		A6CB7AA91B7B08AA009A9E14 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A6CB7AAA1B7B08AA009A9E14 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6CB7AAB1B7B08AA009A9E14 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A6CB7AAC1B7B08AA009A9E14 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A6CB7AAD1B7B08AA009A9E14 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A6CB7AB61B7B092D009A9E14 /* ITRAirSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITRAirSideMenu.h; sourceTree = "<group>"; };
-		A6CB7AB71B7B092D009A9E14 /* ITRAirSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITRAirSideMenu.m; sourceTree = "<group>"; };
+		A6CB7AAC1B7B08AA009A9E14 /* ITRFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITRFirstViewController.h; sourceTree = "<group>"; };
+		A6CB7AAD1B7B08AA009A9E14 /* ITRFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITRFirstViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +65,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A6C9D7331B7BBCD4001CBC14 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A6C9D7341B7BBCD4001CBC14 /* ITRAirSideMenu.h */,
+				A6C9D7351B7BBCD4001CBC14 /* ITRAirSideMenu.m */,
+			);
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
 		A6CB7AA21B7B08AA009A9E14 /* ITRAirSideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				A6CB7AB51B7B092D009A9E14 /* Classes */,
+				A6C9D7331B7BBCD4001CBC14 /* Classes */,
 				A6CB7AA31B7B08AA009A9E14 /* AppDelegate.h */,
 				A6CB7AA41B7B08AA009A9E14 /* AppDelegate.m */,
 				A6CB7AA51B7B08AA009A9E14 /* LaunchScreen.xib */,
@@ -70,19 +85,14 @@
 				A6CB7AA91B7B08AA009A9E14 /* Images.xcassets */,
 				A6CB7AAA1B7B08AA009A9E14 /* Info.plist */,
 				A6CB7AAB1B7B08AA009A9E14 /* main.m */,
-				A6CB7AAC1B7B08AA009A9E14 /* ViewController.h */,
-				A6CB7AAD1B7B08AA009A9E14 /* ViewController.m */,
+				A6CB7AAC1B7B08AA009A9E14 /* ITRFirstViewController.h */,
+				A6CB7AAD1B7B08AA009A9E14 /* ITRFirstViewController.m */,
+				A6C9D7301B7BB35A001CBC14 /* ITRSecondViewController.h */,
+				A6C9D7311B7BB35A001CBC14 /* ITRSecondViewController.m */,
+				A6C9D72D1B7BB0C9001CBC14 /* ITRLeftMenuController.h */,
+				A6C9D72E1B7BB0C9001CBC14 /* ITRLeftMenuController.m */,
 			);
 			path = ITRAirSideMenu;
-			sourceTree = "<group>";
-		};
-		A6CB7AB51B7B092D009A9E14 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				A6CB7AB61B7B092D009A9E14 /* ITRAirSideMenu.h */,
-				A6CB7AB71B7B092D009A9E14 /* ITRAirSideMenu.m */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,9 +166,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6CB7AB81B7B092D009A9E14 /* ITRAirSideMenu.m in Sources */,
-				A6CB7AB41B7B08AA009A9E14 /* ViewController.m in Sources */,
+				A6C9D72F1B7BB0C9001CBC14 /* ITRLeftMenuController.m in Sources */,
+				A6CB7AB41B7B08AA009A9E14 /* ITRFirstViewController.m in Sources */,
 				A6CB7AB31B7B08AA009A9E14 /* main.m in Sources */,
+				A6C9D7321B7BB35A001CBC14 /* ITRSecondViewController.m in Sources */,
+				A6C9D7361B7BBCD4001CBC14 /* ITRAirSideMenu.m in Sources */,
 				A6CB7AAE1B7B08AA009A9E14 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

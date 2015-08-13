@@ -8,6 +8,7 @@
 
 @property (strong, readwrite, nonatomic) UIViewController *contentViewController;
 @property (strong, readwrite, nonatomic) UIViewController *leftMenuViewController;
+
 @property (weak, readwrite, nonatomic) id<ITRAirSideMenuDelegate> delegate;
 
 @property (assign, readwrite, nonatomic) NSTimeInterval animationDuration;
