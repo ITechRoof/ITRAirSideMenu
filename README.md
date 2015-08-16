@@ -2,7 +2,7 @@
 
 Navigation similar to Flipkart drawer navigation
 
-<img src="https://github.com/ITechRoof/ITRAirSideMenu/blob/master/Demo.png" alt="">
+<img src="https://github.com/ITechRoof/ITRAirSideMenu/blob/master/Demo.png" width = "320" height="568" "alt="">
 
 ## Requirements
 * Xcode 6 or higher
