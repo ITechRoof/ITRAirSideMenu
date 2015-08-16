@@ -41,11 +41,11 @@
     //content view animation properties
     _itrAirSideMenu.contentViewScaleValue = 0.7f;
     _itrAirSideMenu.contentViewRotatingAngle = 30.0f;
-    _itrAirSideMenu.contentViewTranslateX = 150.0f;
+    _itrAirSideMenu.contentViewTranslateX = 130.0f;
     
     //menu view properties
     _itrAirSideMenu.menuViewRotatingAngle = 30.0f;
-    _itrAirSideMenu.menuViewTranslateX = 150.0f;
+    _itrAirSideMenu.menuViewTranslateX = 130.0f;
     
     self.window.rootViewController = _itrAirSideMenu;
     self.window.backgroundColor = [UIColor whiteColor];
