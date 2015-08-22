@@ -27,6 +27,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    self.navigationController.navigationBar.translucent = NO;
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Menu"
                                                                              style:UIBarButtonItemStylePlain
                                                                             target:self

@@ -12,11 +12,11 @@
 		A6C4E9101B7C412000707673 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C4E9031B7C412000707673 /* Main.storyboard */; };
 		A6C4E9111B7C412000707673 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6C4E9051B7C412000707673 /* Images.xcassets */; };
 		A6C4E9121B7C412000707673 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6C4E9061B7C412000707673 /* Info.plist */; };
-		A6C4E9131B7C412000707673 /* ITRFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C4E9081B7C412000707673 /* ITRFirstViewController.m */; };
-		A6C4E9141B7C412000707673 /* ITRLeftMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C4E90A1B7C412000707673 /* ITRLeftMenuController.m */; };
-		A6C4E9151B7C412000707673 /* ITRSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C4E90C1B7C412000707673 /* ITRSecondViewController.m */; };
 		A6C4E9161B7C412000707673 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C4E90D1B7C412000707673 /* main.m */; };
 		A6C4E91A1B7C412900707673 /* ITRAirSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C4E9191B7C412900707673 /* ITRAirSideMenu.m */; };
+		A6CC608C1B887AE50014CF8B /* ITRFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC60871B887AE50014CF8B /* ITRFirstViewController.m */; };
+		A6CC608D1B887AE50014CF8B /* ITRLeftMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC60891B887AE50014CF8B /* ITRLeftMenuController.m */; };
+		A6CC608E1B887AE50014CF8B /* ITRSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC608B1B887AE50014CF8B /* ITRSecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,15 +27,15 @@
 		A6C4E9041B7C412000707673 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A6C4E9051B7C412000707673 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A6C4E9061B7C412000707673 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A6C4E9071B7C412000707673 /* ITRFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITRFirstViewController.h; sourceTree = "<group>"; };
-		A6C4E9081B7C412000707673 /* ITRFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITRFirstViewController.m; sourceTree = "<group>"; };
-		A6C4E9091B7C412000707673 /* ITRLeftMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITRLeftMenuController.h; sourceTree = "<group>"; };
-		A6C4E90A1B7C412000707673 /* ITRLeftMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITRLeftMenuController.m; sourceTree = "<group>"; };
-		A6C4E90B1B7C412000707673 /* ITRSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITRSecondViewController.h; sourceTree = "<group>"; };
-		A6C4E90C1B7C412000707673 /* ITRSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITRSecondViewController.m; sourceTree = "<group>"; };
 		A6C4E90D1B7C412000707673 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A6C4E9181B7C412900707673 /* ITRAirSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITRAirSideMenu.h; sourceTree = "<group>"; };
 		A6C4E9191B7C412900707673 /* ITRAirSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITRAirSideMenu.m; sourceTree = "<group>"; };
+		A6CC60861B887AE50014CF8B /* ITRFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITRFirstViewController.h; sourceTree = "<group>"; };
+		A6CC60871B887AE50014CF8B /* ITRFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITRFirstViewController.m; sourceTree = "<group>"; };
+		A6CC60881B887AE50014CF8B /* ITRLeftMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITRLeftMenuController.h; sourceTree = "<group>"; };
+		A6CC60891B887AE50014CF8B /* ITRLeftMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITRLeftMenuController.m; sourceTree = "<group>"; };
+		A6CC608A1B887AE50014CF8B /* ITRSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITRSecondViewController.h; sourceTree = "<group>"; };
+		A6CC608B1B887AE50014CF8B /* ITRSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITRSecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,18 +69,13 @@
 		A6C4E8FE1B7C412000707673 /* ITRAirSideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				A6CC60851B887AE50014CF8B /* Controller */,
 				A6C4E8FF1B7C412000707673 /* AppDelegate.h */,
 				A6C4E9001B7C412000707673 /* AppDelegate.m */,
 				A6C4E9011B7C412000707673 /* LaunchScreen.xib */,
 				A6C4E9031B7C412000707673 /* Main.storyboard */,
 				A6C4E9051B7C412000707673 /* Images.xcassets */,
 				A6C4E9061B7C412000707673 /* Info.plist */,
-				A6C4E9071B7C412000707673 /* ITRFirstViewController.h */,
-				A6C4E9081B7C412000707673 /* ITRFirstViewController.m */,
-				A6C4E9091B7C412000707673 /* ITRLeftMenuController.h */,
-				A6C4E90A1B7C412000707673 /* ITRLeftMenuController.m */,
-				A6C4E90B1B7C412000707673 /* ITRSecondViewController.h */,
-				A6C4E90C1B7C412000707673 /* ITRSecondViewController.m */,
 				A6C4E90D1B7C412000707673 /* main.m */,
 			);
 			name = ITRAirSideMenu;
@@ -94,6 +89,19 @@
 				A6C4E9191B7C412900707673 /* ITRAirSideMenu.m */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		A6CC60851B887AE50014CF8B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A6CC60861B887AE50014CF8B /* ITRFirstViewController.h */,
+				A6CC60871B887AE50014CF8B /* ITRFirstViewController.m */,
+				A6CC60881B887AE50014CF8B /* ITRLeftMenuController.h */,
+				A6CC60891B887AE50014CF8B /* ITRLeftMenuController.m */,
+				A6CC608A1B887AE50014CF8B /* ITRSecondViewController.h */,
+				A6CC608B1B887AE50014CF8B /* ITRSecondViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,11 +176,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6C4E9161B7C412000707673 /* main.m in Sources */,
+				A6CC608D1B887AE50014CF8B /* ITRLeftMenuController.m in Sources */,
+				A6CC608C1B887AE50014CF8B /* ITRFirstViewController.m in Sources */,
 				A6C4E90E1B7C412000707673 /* AppDelegate.m in Sources */,
-				A6C4E9141B7C412000707673 /* ITRLeftMenuController.m in Sources */,
-				A6C4E9151B7C412000707673 /* ITRSecondViewController.m in Sources */,
+				A6CC608E1B887AE50014CF8B /* ITRSecondViewController.m in Sources */,
 				A6C4E91A1B7C412900707673 /* ITRAirSideMenu.m in Sources */,
-				A6C4E9131B7C412000707673 /* ITRFirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
