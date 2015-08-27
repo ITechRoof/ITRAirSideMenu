@@ -1,6 +1,6 @@
 # ITRAirSideMenu
 
-Navigation similar to Flipkart drawer navigation
+Air sidemenu drawer navigation 
 
 <img src="https://github.com/ITechRoof/ITRAirSideMenu/blob/master/Demo.png" width = "320" height="568" "alt="">
 
