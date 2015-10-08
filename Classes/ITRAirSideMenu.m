@@ -519,7 +519,6 @@
             [self hideMenuViewControllerAnimated:NO];
         }
         else {
-            if ([recognizer velocityInView:self.view].x > 0) {
                 if (self.contentViewContainer.frame.origin.x < 0) {
                     [self hideMenuViewController];
                 } else {
@@ -527,7 +526,7 @@
                         [self showLeftMenuViewController];
                     }
                 }
-            }
+            
         }
     }
     
