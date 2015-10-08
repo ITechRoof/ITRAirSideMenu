@@ -12,8 +12,10 @@
 #import "AppDelegate.h"
 #import "ITRAirSideMenu.h"
 
-@interface ITRLeftMenuController ()
-
+@interface ITRLeftMenuController ()<ITRAirSideMenuDelegate>
+{
+    NSIndexPath *selectedIndexPath;
+}
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -42,22 +44,21 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     ITRAirSideMenu *itrSideMenu = ((AppDelegate *)[UIApplication sharedApplication].delegate).itrAirSideMenu;
-    
+    itrSideMenu.delegate = self;
     //update content view controller with setContentViewController
-    switch (indexPath.row % 2) {
-        case 0:
-            [itrSideMenu setContentViewController:[[UINavigationController alloc] initWithRootViewController:[ITRFirstViewController controller]] animated:YES];
+    [itrSideMenu hideMenuViewController];
+    selectedIndexPath = indexPath;
+}
 
-            [itrSideMenu hideMenuViewController];
-            break;
-        case 1:
-            [itrSideMenu setContentViewController:[[UINavigationController alloc] initWithRootViewController:[ITRSecondViewController controller]]
-                                                         animated:YES];
-            [itrSideMenu hideMenuViewController];
-            break;
-        default:
-            break;
+- (void)sideMenu:(ITRAirSideMenu *)sideMenu didHideMenuViewController:(UIViewController *)menuViewController{
+    
+    if (selectedIndexPath.row % 2 == 0) {
+        [sideMenu setContentViewController:[[UINavigationController alloc] initWithRootViewController:[ITRFirstViewController controller]]];
+    }else{
+        
+        [sideMenu setContentViewController:[[UINavigationController alloc] initWithRootViewController:[ITRSecondViewController controller]]];
     }
+    
 }
 
 #pragma mark -

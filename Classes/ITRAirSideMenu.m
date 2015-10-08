@@ -108,6 +108,8 @@
         [self addChildViewController:contentViewController];
         contentViewController.view.alpha = 0;
         contentViewController.view.frame = self.contentViewContainer.bounds;
+        contentViewController.view.layer.transform = self.contentViewController.view.layer.transform;
+        contentViewController.view.superview.layer.sublayerTransform = _contentViewController.view.superview.layer.sublayerTransform;
         [self.contentViewContainer addSubview:contentViewController.view];
         
         [UIView animateWithDuration:self.animationDuration animations:^{
@@ -118,7 +120,6 @@
             _contentViewController = contentViewController;
             
             [self updateContentViewShadow];
-            
         }];
     }
 }
@@ -289,7 +290,6 @@
             return;
         }
         
-        [UIView animateWithDuration:self.animationDuration animations:^{
             
             //content view scale transform
             CATransform3D contentScaleTransform =  _contentViewContainer.layer.transform;
@@ -323,9 +323,8 @@
             _menuViewContainer.layer.transform = menuTranslateTransform;
             
             
-        } completion:nil];
         
-        strongSelf.contentViewContainer.frame = strongSelf.view.bounds;
+        //strongSelf.contentViewContainer.frame = strongSelf.view.bounds;
         
         
     };
@@ -436,8 +435,11 @@
     if (recognizer.state == UIGestureRecognizerStateChanged) {
         
         CGPoint newLocationPoint = point;
-        //track movement til x value is 300
-        if(newLocationPoint.x >= 0 && newLocationPoint.x <= 300)
+        if(newLocationPoint.x < 0)
+            newLocationPoint.x = 300 + newLocationPoint.x;
+        
+        //track movement
+        if((newLocationPoint.x >= 0 && newLocationPoint.x <= 300))
         {
             [self setAnchorPoint:CGPointMake(1.0, 0.5) forView:_contentViewContainer];
             [self setAnchorPoint:CGPointMake(1.0, 0.5) forView:_contentViewController.view];
@@ -560,7 +562,7 @@
     [self updateContentViewShadow];
     
     
-    [self hideMenuViewController];
+   // [self hideMenuViewController];
 }
 - (void)setLeftMenuViewController:(UIViewController *)leftMenuViewController
 {
