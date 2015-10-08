@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'ITRAirSideMenu'
-  s.version      = '1.0.0'
+  s.version      = '1.0.2'
   s.summary      = 'Navigation similar to Flipkart drawer navigation'
   s.homepage     = 'https://github.com/ITechRoof/ITRAirSideMenu'
   
