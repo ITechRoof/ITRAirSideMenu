@@ -11,6 +11,7 @@
 
 @property (weak, readwrite, nonatomic) id<ITRAirSideMenuDelegate> delegate;
 
+@property (assign, readonly, nonatomic) BOOL leftMenuVisible;
 @property (assign, readwrite, nonatomic) NSTimeInterval animationDuration;
 @property (strong, readwrite, nonatomic) UIImage *backgroundImage;
 @property (assign, readwrite, nonatomic) BOOL panGestureEnabled;
