@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
 
   s.name         = 'ITRAirSideMenu'
-  s.version      = '1.0.2'
-  s.summary      = 'Navigation similar to Flipkart drawer navigation'
+  s.version      = '1.0.3'
+  s.summary      = 'Air side navigation.'
   s.homepage     = 'https://github.com/ITechRoof/ITRAirSideMenu'
   
   s.license      = { :type => 'MIT', :file => 'FILE_LICENSE' }
