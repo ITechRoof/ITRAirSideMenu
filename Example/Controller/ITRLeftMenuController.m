@@ -10,9 +10,8 @@
 #import "ITRFirstViewController.h"
 #import "ITRSecondViewController.h"
 #import "AppDelegate.h"
-#import "ITRAirSideMenu.h"
 
-@interface ITRLeftMenuController ()<ITRAirSideMenuDelegate>
+@interface ITRLeftMenuController ()
 {
     NSIndexPath *selectedIndexPath;
 }
@@ -23,7 +22,7 @@
 @implementation ITRLeftMenuController
 
 
-+ (instancetype) controller{
++ (instancetype)controller {
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     return [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([ITRLeftMenuController class])];
@@ -31,34 +30,21 @@
 
 #pragma view lifecycle
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 }
 
 #pragma mark -
 #pragma mark UITableView Delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     ITRAirSideMenu *itrSideMenu = ((AppDelegate *)[UIApplication sharedApplication].delegate).itrAirSideMenu;
-    itrSideMenu.delegate = self;
     //update content view controller with setContentViewController
     [itrSideMenu hideMenuViewController];
     selectedIndexPath = indexPath;
-}
-
-- (void)sideMenu:(ITRAirSideMenu *)sideMenu didHideMenuViewController:(UIViewController *)menuViewController{
-    
-    if (selectedIndexPath.row % 2 == 0) {
-        [sideMenu setContentViewController:[[UINavigationController alloc] initWithRootViewController:[ITRFirstViewController controller]]];
-    }else{
-        
-        [sideMenu setContentViewController:[[UINavigationController alloc] initWithRootViewController:[ITRSecondViewController controller]]];
-    }
-    
 }
 
 #pragma mark -
@@ -100,5 +86,38 @@
     return cell;
 }
 
+#pragma mark -
+#pragma mark ITRAirSideMenu Delegate
 
+- (void)sideMenu:(ITRAirSideMenu *)sideMenu didRecognizePanGesture:(UIPanGestureRecognizer *)recognizer {
+    
+    NSLog(@"didRecognizePanGesture");
+}
+
+- (void)sideMenu:(ITRAirSideMenu *)sideMenu willShowMenuViewController:(UIViewController *)menuViewController {
+    
+    NSLog(@"willShowMenuViewController: %@ isMenuVisible <%d>", NSStringFromClass([menuViewController class]), (int)sideMenu.isLeftMenuVisible );
+}
+
+- (void)sideMenu:(ITRAirSideMenu *)sideMenu didShowMenuViewController:(UIViewController *)menuViewController {
+    
+    NSLog(@"didShowMenuViewController: %@ isMenuVisible <%d>", NSStringFromClass([menuViewController class]), (int)sideMenu.isLeftMenuVisible );
+}
+
+- (void)sideMenu:(ITRAirSideMenu *)sideMenu willHideMenuViewController:(UIViewController *)menuViewController {
+    
+    NSLog(@"willHideMenuViewController: %@ isMenuVisible <%d>", NSStringFromClass([menuViewController class]), (int)sideMenu.isLeftMenuVisible );
+}
+
+- (void)sideMenu:(ITRAirSideMenu *)sideMenu didHideMenuViewController:(UIViewController *)menuViewController{
+    
+    NSLog(@"didHideMenuViewController: %@ isMenuVisible <%d>", NSStringFromClass([menuViewController class]), (int)sideMenu.isLeftMenuVisible );
+    
+    if (selectedIndexPath.row % 2 == 0) {
+        [sideMenu setContentViewController:[[UINavigationController alloc] initWithRootViewController:[ITRFirstViewController controller]]];
+    }else{
+        
+        [sideMenu setContentViewController:[[UINavigationController alloc] initWithRootViewController:[ITRSecondViewController controller]]];
+    }
+}
 @end

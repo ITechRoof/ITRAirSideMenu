@@ -10,7 +10,7 @@
 #import "ITRFirstViewController.h"
 #import "ITRLeftMenuController.h"
 
-@interface AppDelegate ()<ITRAirSideMenuDelegate>
+@interface AppDelegate ()
 
 @end
 
@@ -29,7 +29,7 @@
     _itrAirSideMenu.backgroundImage = [UIImage imageNamed:@"menu_bg"];
     
     //optional delegate to receive menu view status
-    _itrAirSideMenu.delegate = self;
+    _itrAirSideMenu.delegate = leftMenuViewController;
     
     //content view shadow properties
     _itrAirSideMenu.contentViewShadowColor = [UIColor blackColor];
@@ -76,27 +76,5 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-#pragma mark -
-#pragma mark ITRAirSideMenu Delegate
-
-- (void)sideMenu:(ITRAirSideMenu *)sideMenu willShowMenuViewController:(UIViewController *)menuViewController
-{
-    NSLog(@"willShowMenuViewController: %@", NSStringFromClass([menuViewController class]));
-}
-
-- (void)sideMenu:(ITRAirSideMenu *)sideMenu didShowMenuViewController:(UIViewController *)menuViewController
-{
-    NSLog(@"didShowMenuViewController: %@", NSStringFromClass([menuViewController class]));
-}
-
-- (void)sideMenu:(ITRAirSideMenu *)sideMenu willHideMenuViewController:(UIViewController *)menuViewController
-{
-    NSLog(@"willHideMenuViewController: %@", NSStringFromClass([menuViewController class]));
-}
-
-- (void)sideMenu:(ITRAirSideMenu *)sideMenu didHideMenuViewController:(UIViewController *)menuViewController
-{
-    NSLog(@"didHideMenuViewController: %@", NSStringFromClass([menuViewController class]));
-}
 
 @end

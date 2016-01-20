@@ -7,7 +7,7 @@
 @property (assign, readwrite, nonatomic) CGPoint lastPoint;
 @property (strong, readwrite, nonatomic) UIImageView *backgroundImageView;
 @property (assign, readwrite, nonatomic) BOOL visible;
-@property (assign, readwrite, nonatomic) BOOL leftMenuVisible;
+@property (assign, readwrite, nonatomic) BOOL isLeftMenuVisible;
 @property (strong, readwrite, nonatomic) UIButton *contentButton;
 
 @property (strong, readwrite, nonatomic) UIView *menuViewContainer;
@@ -206,7 +206,6 @@
     CATransform3D menuTranslateTransform = _menuViewContainer.layer.transform;
     menuTranslateTransform = CATransform3DTranslate(menuTranslateTransform, -_menuViewTranslateX, 0, 0);
     _menuViewContainer.layer.transform = menuTranslateTransform;
-
 }
 
 - (void)showLeftMenuViewController
@@ -214,13 +213,11 @@
     if (!self.leftMenuViewController) {
         return;
     }
-
-    if ([self.delegate conformsToProtocol:@protocol(ITRAirSideMenuDelegate)] && [self.delegate respondsToSelector:@selector(sideMenu:willShowMenuViewController:)]) {
-        [self.delegate sideMenu:self willShowMenuViewController:self.leftMenuViewController];
+    
+    if (!self.visible && [self.delegate conformsToProtocol:@protocol(ITRAirSideMenuDelegate)] && [self.delegate respondsToSelector:@selector(sideMenu:willShowMenuViewController:)]) {
+        [self.delegate sideMenu:self willShowMenuViewController:_leftMenuViewController];
     }
-
-    self.leftMenuVisible = YES;
-
+    
     [self.leftMenuViewController beginAppearanceTransition:YES animated:YES];
     self.leftMenuViewController.view.hidden = NO;
     [self.view.window endEditing:YES];
@@ -268,9 +265,13 @@
         _menuViewContainer.layer.transform = CATransform3DIdentity;
         
     } completion:^(BOOL finished) {
-        if ([self.delegate respondsToSelector:@selector(sideMenu:didShowMenuViewController:)]) {
-            [self.delegate sideMenu:self didShowMenuViewController:self.leftMenuViewController];
+        
+        self.isLeftMenuVisible = YES;
+        
+        if (!self.visible && [self.delegate conformsToProtocol:@protocol(ITRAirSideMenuDelegate)] && [self.delegate respondsToSelector:@selector(sideMenu:didShowMenuViewController:)]) {
+            [self.delegate sideMenu:self didShowMenuViewController:_leftMenuViewController];
         }
+        self.visible = YES;
     }];
     
 }
@@ -288,13 +289,10 @@
 {
     UIViewController *visibleMenuViewController = self.leftMenuViewController;
     [visibleMenuViewController beginAppearanceTransition:NO animated:animated];
-    if ([self.delegate conformsToProtocol:@protocol(ITRAirSideMenuDelegate)] && [self.delegate respondsToSelector:@selector(sideMenu:willHideMenuViewController:)]) {
+    
+    if (self.visible && [self.delegate conformsToProtocol:@protocol(ITRAirSideMenuDelegate)] && [self.delegate respondsToSelector:@selector(sideMenu:willHideMenuViewController:)]) {
         [self.delegate sideMenu:self willHideMenuViewController:self.leftMenuViewController];
     }
-    
-    self.visible = NO;
-    self.leftMenuVisible = NO;
-    [self.contentButton removeFromSuperview];
     
     __typeof (self) __weak weakSelf = self;
     void (^animationBlock)(void) = ^{
@@ -339,21 +337,21 @@
             menuTranslateTransform = CATransform3DTranslate(menuTranslateTransform, -_menuViewTranslateX, 0, 0);
             _menuViewContainer.layer.transform = menuTranslateTransform;
             
-            
-        
-        //strongSelf.contentViewContainer.frame = strongSelf.view.bounds;
-        
-        
-    };
+     };
     void (^completionBlock)(void) = ^{
         __typeof (weakSelf) __strong strongSelf = weakSelf;
         if (!strongSelf) {
             return;
         }
         [visibleMenuViewController endAppearanceTransition];
-        if (!strongSelf.visible && [strongSelf.delegate conformsToProtocol:@protocol(ITRAirSideMenuDelegate)] && [strongSelf.delegate respondsToSelector:@selector(sideMenu:didHideMenuViewController:)]) {
+        [self.contentButton removeFromSuperview];
+        
+        strongSelf.isLeftMenuVisible = NO;
+        
+        if (strongSelf.visible && [strongSelf.delegate conformsToProtocol:@protocol(ITRAirSideMenuDelegate)] && [strongSelf.delegate respondsToSelector:@selector(sideMenu:didHideMenuViewController:)]) {
             [strongSelf.delegate sideMenu:strongSelf didHideMenuViewController:strongSelf.leftMenuViewController];
         }
+        strongSelf.visible = NO;
     };
     
     if (animated) {
@@ -404,7 +402,7 @@
 {
     CGPoint translation = [gestureRecognizer translationInView:self.view];
 
-    if (self.leftMenuVisible) {
+    if (self.isLeftMenuVisible) {
         if (translation.x > 0) {
             return NO;
         }
@@ -538,7 +536,7 @@
             self.contentViewContainer.transform = CGAffineTransformIdentity;
             self.contentViewContainer.frame = self.view.bounds;
             self.visible = NO;
-            self.leftMenuVisible = NO;
+            self.isLeftMenuVisible = NO;
         }
         
     }
@@ -619,6 +617,7 @@
 
 #pragma mark - Utilities
 - (void)setAnchorPoint:(CGPoint)anchorPoint forView:(UIView *)view {
+    
     CGPoint oldOrigin = view.frame.origin;
     view.layer.anchorPoint = anchorPoint;
     CGPoint newOrigin = view.frame.origin;
@@ -639,5 +638,7 @@
     
     return YES;
 }
+
+
 
 @end

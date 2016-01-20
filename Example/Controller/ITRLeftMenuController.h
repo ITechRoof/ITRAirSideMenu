@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ITRAirSideMenu.h"
 
-@interface ITRLeftMenuController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface ITRLeftMenuController : UIViewController<UITableViewDataSource, UITableViewDelegate, ITRAirSideMenuDelegate>
 
 + (instancetype) controller;
 
