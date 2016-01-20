@@ -206,10 +206,7 @@
     CATransform3D menuTranslateTransform = _menuViewContainer.layer.transform;
     menuTranslateTransform = CATransform3DTranslate(menuTranslateTransform, -_menuViewTranslateX, 0, 0);
     _menuViewContainer.layer.transform = menuTranslateTransform;
-    
-    if ([self.delegate conformsToProtocol:@protocol(ITRAirSideMenuDelegate)] && [self.delegate respondsToSelector:@selector(sideMenu:willShowMenuViewController:)]) {
-        [self.delegate sideMenu:self willShowMenuViewController:menuViewController];
-    }
+
 }
 
 - (void)showLeftMenuViewController
@@ -217,7 +214,13 @@
     if (!self.leftMenuViewController) {
         return;
     }
-    
+
+    if ([self.delegate conformsToProtocol:@protocol(ITRAirSideMenuDelegate)] && [self.delegate respondsToSelector:@selector(sideMenu:willShowMenuViewController:)]) {
+        [self.delegate sideMenu:self willShowMenuViewController:self.leftMenuViewController];
+    }
+
+    self.leftMenuVisible = YES;
+
     [self.leftMenuViewController beginAppearanceTransition:YES animated:YES];
     self.leftMenuViewController.view.hidden = NO;
     [self.view.window endEditing:YES];
@@ -264,7 +267,11 @@
 
         _menuViewContainer.layer.transform = CATransform3DIdentity;
         
-    } completion:nil];
+    } completion:^(BOOL finished) {
+        if ([self.delegate respondsToSelector:@selector(sideMenu:didShowMenuViewController:)]) {
+            [self.delegate sideMenu:self didShowMenuViewController:self.leftMenuViewController];
+        }
+    }];
     
 }
 
@@ -396,6 +403,14 @@
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer
 {
     CGPoint translation = [gestureRecognizer translationInView:self.view];
+
+    if (self.leftMenuVisible) {
+        if (translation.x > 0) {
+            return NO;
+        }
+    } else if (translation.x <= 0) {
+        return NO;
+    }
 
     return fabs(translation.y) < fabs(translation.x);
 }
@@ -624,7 +639,5 @@
     
     return YES;
 }
-
-
 
 @end
