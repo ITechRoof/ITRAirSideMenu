@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6A15C0C217EE1220009B873 /* AirSideMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = A6A15C0A217EE1220009B873 /* AirSideMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6A15C0F217EE1220009B873 /* AirSideMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A15C08217EE1220009B873 /* AirSideMenu.framework */; };
+		A6A15C10217EE1220009B873 /* AirSideMenu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6A15C08217EE1220009B873 /* AirSideMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A6C4E90E1B7C412000707673 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C4E9001B7C412000707673 /* AppDelegate.m */; };
 		A6C4E90F1B7C412000707673 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6C4E9011B7C412000707673 /* LaunchScreen.xib */; };
 		A6C4E9101B7C412000707673 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C4E9031B7C412000707673 /* Main.storyboard */; };
@@ -19,7 +22,34 @@
 		A6CC608E1B887AE50014CF8B /* ITRSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CC608B1B887AE50014CF8B /* ITRSecondViewController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A6A15C0D217EE1220009B873 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6C4AB821B7A5D7300AF0EC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6A15C07217EE1220009B873;
+			remoteInfo = AirSideMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A6A15C14217EE1220009B873 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A6A15C10217EE1220009B873 /* AirSideMenu.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		A6A15C08217EE1220009B873 /* AirSideMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AirSideMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6A15C0A217EE1220009B873 /* AirSideMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AirSideMenu.h; sourceTree = "<group>"; };
+		A6A15C0B217EE1220009B873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6C4AB8A1B7A5D7400AF0EC6 /* ITRAirSideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITRAirSideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C4E8FF1B7C412000707673 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A6C4E9001B7C412000707673 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,21 +69,39 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A6C4AB871B7A5D7400AF0EC6 /* Frameworks */ = {
+		A6A15C04217EE1220009B873 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A6C4AB871B7A5D7400AF0EC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6A15C0F217EE1220009B873 /* AirSideMenu.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A6A15C09217EE1220009B873 /* AirSideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A6A15C0A217EE1220009B873 /* AirSideMenu.h */,
+				A6A15C0B217EE1220009B873 /* Info.plist */,
+			);
+			path = AirSideMenu;
+			sourceTree = "<group>";
+		};
 		A6C4AB811B7A5D7300AF0EC6 = {
 			isa = PBXGroup;
 			children = (
 				A6C4E9171B7C412900707673 /* Classes */,
 				A6C4E8FE1B7C412000707673 /* ITRAirSideMenu */,
+				A6A15C09217EE1220009B873 /* AirSideMenu */,
 				A6C4AB8B1B7A5D7400AF0EC6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				A6C4AB8A1B7A5D7400AF0EC6 /* ITRAirSideMenu.app */,
+				A6A15C08217EE1220009B873 /* AirSideMenu.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,7 +155,36 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		A6A15C05217EE1220009B873 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6A15C0C217EE1220009B873 /* AirSideMenu.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		A6A15C07217EE1220009B873 /* AirSideMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6A15C13217EE1220009B873 /* Build configuration list for PBXNativeTarget "AirSideMenu" */;
+			buildPhases = (
+				A6A15C03217EE1220009B873 /* Sources */,
+				A6A15C04217EE1220009B873 /* Frameworks */,
+				A6A15C05217EE1220009B873 /* Headers */,
+				A6A15C06217EE1220009B873 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirSideMenu;
+			productName = AirSideMenu;
+			productReference = A6A15C08217EE1220009B873 /* AirSideMenu.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		A6C4AB891B7A5D7400AF0EC6 /* ITRAirSideMenu */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6C4ABAD1B7A5D7400AF0EC6 /* Build configuration list for PBXNativeTarget "ITRAirSideMenu" */;
@@ -114,10 +192,12 @@
 				A6C4AB861B7A5D7400AF0EC6 /* Sources */,
 				A6C4AB871B7A5D7400AF0EC6 /* Frameworks */,
 				A6C4AB881B7A5D7400AF0EC6 /* Resources */,
+				A6A15C14217EE1220009B873 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A6A15C0E217EE1220009B873 /* PBXTargetDependency */,
 			);
 			name = ITRAirSideMenu;
 			productName = ITRAirSideMenu;
@@ -133,6 +213,10 @@
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = kirthi;
 				TargetAttributes = {
+					A6A15C07217EE1220009B873 = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
 					A6C4AB891B7A5D7400AF0EC6 = {
 						CreatedOnToolsVersion = 6.4;
 					};
@@ -152,11 +236,19 @@
 			projectRoot = "";
 			targets = (
 				A6C4AB891B7A5D7400AF0EC6 /* ITRAirSideMenu */,
+				A6A15C07217EE1220009B873 /* AirSideMenu */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A6A15C06217EE1220009B873 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6C4AB881B7A5D7400AF0EC6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -171,6 +263,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A6A15C03217EE1220009B873 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6C4AB861B7A5D7400AF0EC6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -185,6 +284,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A6A15C0E217EE1220009B873 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6A15C07217EE1220009B873 /* AirSideMenu */;
+			targetProxy = A6A15C0D217EE1220009B873 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A6C4E9011B7C412000707673 /* LaunchScreen.xib */ = {
@@ -206,6 +313,93 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A6A15C11217EE1220009B873 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = AirSideMenu/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ITR.AirSideMenu;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A6A15C12217EE1220009B873 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = AirSideMenu/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ITR.AirSideMenu;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		A6C4ABAB1B7A5D7400AF0EC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -290,6 +484,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,6 +495,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -309,6 +505,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A6A15C13217EE1220009B873 /* Build configuration list for PBXNativeTarget "AirSideMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6A15C11217EE1220009B873 /* Debug */,
+				A6A15C12217EE1220009B873 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A6C4AB851B7A5D7400AF0EC6 /* Build configuration list for PBXProject "ITRAirSideMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
