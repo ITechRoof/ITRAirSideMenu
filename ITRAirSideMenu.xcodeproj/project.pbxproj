@@ -52,6 +52,7 @@
 		A6A15C38217EF4760009B873 /* AirSideMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AirSideMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A15C3A217EF4770009B873 /* AirSideMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AirSideMenu.h; sourceTree = "<group>"; };
 		A6A15C3B217EF4770009B873 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6A15C49217EF71B0009B873 /* AirSideMenu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AirSideMenu.framework; path = ../Demo/Carthage/Build/iOS/AirSideMenu.framework; sourceTree = "<group>"; };
 		A6C4AB8A1B7A5D7400AF0EC6 /* ITRAirSideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ITRAirSideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C4E8FF1B7C412000707673 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A6C4E9001B7C412000707673 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -98,6 +99,14 @@
 			path = AirSideMenu;
 			sourceTree = "<group>";
 		};
+		A6A15C48217EF71B0009B873 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6A15C49217EF71B0009B873 /* AirSideMenu.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A6C4AB811B7A5D7300AF0EC6 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +114,7 @@
 				A6C4E8FE1B7C412000707673 /* ITRAirSideMenu */,
 				A6A15C39217EF4760009B873 /* AirSideMenu */,
 				A6C4AB8B1B7A5D7400AF0EC6 /* Products */,
+				A6A15C48217EF71B0009B873 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
