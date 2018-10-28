@@ -14,6 +14,6 @@ FOUNDATION_EXPORT double AirSideMenuVersionNumber;
 //! Project version string for AirSideMenu.
 FOUNDATION_EXPORT const unsigned char AirSideMenuVersionString[];
 
-#import <AirSideMenu/ITRAirSideMenu.h>
+#import "ITRAirSideMenu.h"
 
 

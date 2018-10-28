@@ -10,7 +10,7 @@
 		A6A15C3C217EF4770009B873 /* AirSideMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = A6A15C3A217EF4770009B873 /* AirSideMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6A15C3F217EF4770009B873 /* AirSideMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A15C38217EF4760009B873 /* AirSideMenu.framework */; };
 		A6A15C40217EF4770009B873 /* AirSideMenu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6A15C38217EF4760009B873 /* AirSideMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A6A15C45217EF5E20009B873 /* ITRAirSideMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = A6C4E9181B7C412900707673 /* ITRAirSideMenu.h */; };
+		A6A15C45217EF5E20009B873 /* ITRAirSideMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = A6C4E9181B7C412900707673 /* ITRAirSideMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6A15C46217EF5E50009B873 /* ITRAirSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C4E9191B7C412900707673 /* ITRAirSideMenu.m */; };
 		A6C4E90E1B7C412000707673 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6C4E9001B7C412000707673 /* AppDelegate.m */; };
 		A6C4E90F1B7C412000707673 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6C4E9011B7C412000707673 /* LaunchScreen.xib */; };
